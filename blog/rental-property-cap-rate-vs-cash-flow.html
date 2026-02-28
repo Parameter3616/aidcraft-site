@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Property Analysis: Cap Rate vs. Cash-on-Cash Return | Cobalt Arc</title>
+  <meta name="description" content="Cap rate and cash-on-cash return measure different things. Learn when to use each metric, how to calculate them, and why smart landlords track both for every rental property.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a1628; color: #e2e8f0; line-height: 1.8; }
+    a { color: #60a5fa; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); border-bottom: 1px solid rgba(96,165,250,0.2); padding: 1rem 2rem; }
+    .header-inner { max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.4rem; font-weight: 700; color: #fff; }
+    .logo span { color: #60a5fa; }
+    nav a { margin-left: 1.5rem; color: #94a3b8; font-size: 0.9rem; }
+    nav a:hover { color: #fff; text-decoration: none; }
+
+    article { max-width: 720px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+    .post-meta { color: #64748b; font-size: 0.85rem; margin-bottom: 2rem; }
+    .tag { display: inline-block; background: rgba(96,165,250,0.15); color: #60a5fa; padding: 0.15rem 0.6rem; border-radius: 99px; font-size: 0.75rem; margin-right: 0.4rem; }
+    h1 { font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.3; }
+    h2 { font-size: 1.35rem; color: #fff; margin: 2rem 0 0.8rem; }
+    p { margin-bottom: 1.2rem; color: #cbd5e1; }
+    strong { color: #fff; }
+    ul, ol { margin: 0 0 1.2rem 1.5rem; color: #cbd5e1; }
+    li { margin-bottom: 0.5rem; }
+    .formula-box { background: rgba(30,58,95,0.5); border: 1px solid rgba(96,165,250,0.2); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 1.5rem 0; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.95rem; color: #60a5fa; text-align: center; }
+    .example-box { background: rgba(30,58,95,0.3); border-left: 3px solid #60a5fa; padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+    .example-box p { margin-bottom: 0.5rem; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+    .comparison-table th, .comparison-table td { padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid rgba(96,165,250,0.15); }
+    .comparison-table th { color: #60a5fa; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(30,58,95,0.3); }
+    .comparison-table td { color: #cbd5e1; font-size: 0.95rem; }
+    .cta-box { background: linear-gradient(135deg, rgba(30,58,95,0.6), rgba(96,165,250,0.1)); border: 1px solid rgba(96,165,250,0.3); border-radius: 12px; padding: 1.5rem 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-box p { color: #94a3b8; margin-bottom: 1rem; }
+    .cta-button { display: inline-block; background: #2563eb; color: #fff; padding: 0.7rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; }
+    .cta-button:hover { background: #1d4ed8; text-decoration: none; }
+
+    footer { text-align: center; padding: 2rem; color: #475569; font-size: 0.85rem; border-top: 1px solid rgba(96,165,250,0.1); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="/aidcraft-site/" class="logo">Cobalt <span>Arc</span></a>
+      <nav>
+        <a href="/aidcraft-site/">Products</a>
+        <a href="/aidcraft-site/blog/">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <article>
+    <div class="post-meta">March 1, 2026 &middot; <span class="tag">Real Estate</span> <span class="tag">Investing</span></div>
+    <h1>Rental Property Analysis: Cap Rate vs. Cash-on-Cash Return</h1>
+    <p>Ask two real estate investors how they evaluate a rental property and you'll get two different answers. One swears by cap rate. The other won't buy anything without running cash-on-cash return first.</p>
+    <p>They're both right &mdash; and both incomplete. These two metrics measure different things, and using only one gives you half the picture. Here's when each one matters and how to calculate both.</p>
+
+    <h2>What Cap Rate Tells You</h2>
+    <p><strong>Capitalization rate</strong> measures a property's return based on its purchase price and net operating income, ignoring how you financed it. It answers a simple question: if you paid all cash, what percentage would this property yield annually?</p>
+    <div class="formula-box">
+      Cap Rate = Net Operating Income (NOI) &divide; Property Purchase Price &times; 100
+    </div>
+    <p>NOI is your gross rental income minus operating expenses &mdash; property taxes, insurance, maintenance, vacancy allowance, and management fees. It does <strong>not</strong> include mortgage payments. That's the key distinction.</p>
+    <p>Cap rate is useful for comparing properties against each other regardless of financing terms. A duplex in Cleveland and a condo in Austin can be evaluated side by side because the metric strips out loan variables entirely.</p>
+
+    <div class="example-box">
+      <p><strong>Example:</strong></p>
+      <p>Purchase price: $200,000</p>
+      <p>Annual gross rent: $24,000</p>
+      <p>Annual operating expenses: $8,400</p>
+      <p>NOI: $24,000 &minus; $8,400 = <strong>$15,600</strong></p>
+      <p>Cap rate: $15,600 &divide; $200,000 = <strong>7.8%</strong></p>
+    </div>
+
+    <p>A higher cap rate generally means higher return relative to price &mdash; but also often signals higher risk (rougher neighborhood, older building, less stable tenants). Most residential rental investors target somewhere between 5% and 10%.</p>
+
+    <h2>What Cash-on-Cash Return Tells You</h2>
+    <p><strong>Cash-on-cash return</strong> measures the annual return on the actual cash you invested &mdash; your down payment, closing costs, and any rehab money. Unlike cap rate, it accounts for your financing because it uses <strong>pre-tax cash flow</strong> (income after all expenses <em>including</em> the mortgage payment).</p>
+    <div class="formula-box">
+      Cash-on-Cash Return = Annual Pre-Tax Cash Flow &divide; Total Cash Invested &times; 100
+    </div>
+    <p>This metric answers a different question: how hard is <em>my money</em> working? Two investors can buy the same property and get completely different cash-on-cash returns depending on their down payment and loan terms.</p>
+
+    <div class="example-box">
+      <p><strong>Same property, different financing:</strong></p>
+      <p>Purchase price: $200,000 | NOI: $15,600/year</p>
+      <p><strong>Investor A</strong> &mdash; pays all cash ($200,000 invested)</p>
+      <p>Annual cash flow: $15,600 (no mortgage)</p>
+      <p>Cash-on-cash: $15,600 &divide; $200,000 = <strong>7.8%</strong></p>
+      <p><strong>Investor B</strong> &mdash; puts 25% down ($50,000 + $6,000 closing = $56,000 invested)</p>
+      <p>Annual mortgage payments: $10,800</p>
+      <p>Annual cash flow: $15,600 &minus; $10,800 = <strong>$4,800</strong></p>
+      <p>Cash-on-cash: $4,800 &divide; $56,000 = <strong>8.6%</strong></p>
+    </div>
+
+    <p>Investor B earns a higher return on the cash they actually deployed &mdash; that's the power of leverage. But they also carry more risk because that mortgage payment is due whether tenants pay rent or not.</p>
+
+    <h2>When to Use Each Metric</h2>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Scenario</th>
+          <th>Use</th>
+          <th>Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Comparing two properties in different markets</td>
+          <td><strong>Cap Rate</strong></td>
+          <td>Strips out financing &mdash; apples-to-apples comparison</td>
+        </tr>
+        <tr>
+          <td>Deciding between financing options on one property</td>
+          <td><strong>Cash-on-Cash</strong></td>
+          <td>Shows how loan terms change your actual return</td>
+        </tr>
+        <tr>
+          <td>Evaluating a portfolio of properties you already own</td>
+          <td><strong>Both</strong></td>
+          <td>Cap rate shows property quality; CoC shows investment efficiency</td>
+        </tr>
+        <tr>
+          <td>Quick screening of a listing before deeper analysis</td>
+          <td><strong>Cap Rate</strong></td>
+          <td>Requires less data &mdash; no financing details needed</td>
+        </tr>
+        <tr>
+          <td>Deciding if you should refinance</td>
+          <td><strong>Cash-on-Cash</strong></td>
+          <td>New loan terms directly change your CoC return</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>The Mistake Most New Investors Make</h2>
+    <p>The most common error is using cap rate as a standalone buy/don't-buy metric. A property with a 9% cap rate sounds great &mdash; until you factor in a high-interest loan that drops your actual cash-on-cash return to 3%. The property is fine. The financing makes it a bad investment <em>for you</em>.</p>
+    <p>The reverse is also true. A property with a modest 5.5% cap rate and a low-interest assumable mortgage might deliver 11% cash-on-cash. You'd miss that deal entirely if you screened on cap rate alone.</p>
+    <p>Smart investors run <strong>both numbers</strong> on every property. Cap rate tells you whether the property is priced fairly relative to its income. Cash-on-cash tells you whether the deal structure works for your capital.</p>
+
+    <h2>Running the Numbers Quickly</h2>
+    <p>Calculating these metrics by hand for one property is straightforward. But when you're evaluating multiple properties, comparing financing scenarios, and tracking a growing portfolio, the spreadsheet math compounds fast.</p>
+    <p>The key inputs you need for every property: purchase price, gross rent, operating expenses (taxes, insurance, maintenance, management, vacancy rate), loan amount, interest rate, and your total cash invested. From there, both formulas are mechanical &mdash; the challenge is keeping it organized across 5, 10, or 20 properties.</p>
+
+    <div class="cta-box">
+      <p>Our <strong>Rental Property Portfolio Dashboard</strong> calculates cap rate, cash-on-cash return, NOI, and cash flow for every property automatically. Add your properties, enter the numbers, and get instant analysis across your entire portfolio.</p>
+      <a href="https://cobaltarc.lemonsqueezy.com" class="cta-button">See the Dashboard &rarr;</a>
+    </div>
+
+    <p><em>Published by Cobalt Arc &mdash; practical tools for freelancers and small business owners.</em></p>
+  </article>
+
+  <footer>
+    &copy; 2026 Cobalt Arc. All rights reserved.
+  </footer>
+</body>
+</html>
