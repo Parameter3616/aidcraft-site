@@ -4,75 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog — Cobalt Arc</title>
-  <meta name="description" content="Practical guides for freelancers, landlords, and small business owners. Tips on pricing, profitability, bookkeeping, and business operations.">
-  <link rel="alternate" type="application/rss+xml" title="Cobalt Arc Blog" href="/aidcraft-site/blog/feed.xml">
+  <meta name="description" content="Practical guides for freelancers, landlords, and small business owners. Excel tools, pricing strategies, and financial tips from Cobalt Arc.">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a1628; color: #e2e8f0; line-height: 1.7; }
-    a { color: #60a5fa; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Header */
-    header { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); border-bottom: 1px solid rgba(96,165,250,0.2); padding: 1rem 2rem; }
-    .header-inner { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 1.4rem; font-weight: 700; color: #fff; }
-    .logo span { color: #60a5fa; }
-    nav a { margin-left: 1.5rem; color: #94a3b8; font-size: 0.9rem; }
-    nav a:hover { color: #fff; text-decoration: none; }
-
-    /* Main */
-    main { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
-    h1 { font-size: 2rem; color: #fff; margin-bottom: 0.5rem; }
-    .subtitle { color: #94a3b8; margin-bottom: 3rem; font-size: 1.05rem; }
-
-    /* Post cards */
-    .post-card { background: rgba(30,58,95,0.4); border: 1px solid rgba(96,165,250,0.15); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 1.5rem; transition: border-color 0.2s; }
-    .post-card:hover { border-color: rgba(96,165,250,0.4); }
-    .post-card h2 { font-size: 1.25rem; color: #fff; margin-bottom: 0.4rem; }
-    .post-card h2 a { color: #fff; }
-    .post-card h2 a:hover { color: #60a5fa; text-decoration: none; }
-    .post-meta { font-size: 0.85rem; color: #64748b; margin-bottom: 0.6rem; }
-    .post-excerpt { color: #94a3b8; font-size: 0.95rem; }
-    .tag { display: inline-block; background: rgba(96,165,250,0.15); color: #60a5fa; padding: 0.15rem 0.6rem; border-radius: 99px; font-size: 0.75rem; margin-right: 0.4rem; }
-
-    /* Coming soon */
-    .coming-soon { text-align: center; padding: 4rem 2rem; }
-    .coming-soon p { color: #64748b; font-size: 1.05rem; max-width: 500px; margin: 0 auto; }
-
-    /* Footer */
-    footer { text-align: center; padding: 2rem; color: #475569; font-size: 0.85rem; border-top: 1px solid rgba(96,165,250,0.1); }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
+    header { background: linear-gradient(135deg, #0d1b2a 0%, #1b2d45 100%); padding: 1.5rem 2rem; border-bottom: 2px solid #00b4d8; }
+    nav { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.4rem; font-weight: 700; color: #00b4d8; text-decoration: none; }
+    .nav-links a { color: #90caf9; text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem; }
+    .nav-links a:hover { color: #00b4d8; }
+    main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #ffffff; }
+    .subtitle { color: #90a4ae; margin-bottom: 2.5rem; font-size: 1.05rem; }
+    .post-card { background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 8px; padding: 1.8rem; margin-bottom: 1.5rem; transition: border-color 0.2s; }
+    .post-card:hover { border-color: #00b4d8; }
+    .post-card h2 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+    .post-card h2 a { color: #e0e0e0; text-decoration: none; }
+    .post-card h2 a:hover { color: #00b4d8; }
+    .post-meta { color: #78909c; font-size: 0.85rem; margin-bottom: 0.8rem; }
+    .tag { background: #00b4d8; color: #0a0a0a; padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; font-weight: 600; }
+    .post-excerpt { color: #b0bec5; font-size: 0.95rem; }
+    .more-soon { text-align: center; color: #546e7a; margin-top: 2rem; padding: 1.5rem; font-size: 0.95rem; }
+    footer { text-align: center; padding: 2rem; color: #546e7a; font-size: 0.85rem; border-top: 1px solid #1a1a2e; }
+    footer a { color: #00b4d8; text-decoration: none; }
   </style>
 </head>
 <body>
   <header>
-    <div class="header-inner">
-      <div class="logo">Cobalt <span>Arc</span></div>
-      <nav>
+    <nav>
+      <a href="/aidcraft-site/" class="logo">Cobalt Arc</a>
+      <div class="nav-links">
         <a href="/aidcraft-site/">Products</a>
         <a href="/aidcraft-site/blog/">Blog</a>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
-
   <main>
-    <h1>Blog</h1>
-    <p class="subtitle">Practical guides for freelancers, landlords, and small business owners.</p>
+    <h1>Cobalt Arc Blog</h1>
+    <p class="subtitle">Practical tools and strategies for freelancers, landlords, and small business owners.</p>
 
-    <div class="coming-soon">
-      <p>New articles coming soon. We're working on guides about freelancer pricing, rental property analysis, and small business bookkeeping.</p>
-    </div>
+    <article class="post-card">
+      <h2><a href="/aidcraft-site/blog/calculate-true-freelancer-hourly-rate.html">How to Calculate Your True Freelancer Hourly Rate</a></h2>
+      <div class="post-meta">February 28, 2026 &middot; <span class="tag">Freelancing</span> <span class="tag">Pricing</span></div>
+      <p class="post-excerpt">Most freelancers know what they charge per hour — but not what they actually earn. Here is the step-by-step formula to find your real effective hourly rate per client so you can drop unprofitable work and focus on what pays.</p>
+    </article>
 
     <!-- TEMPLATE: Copy this block for each new post
     <article class="post-card">
       <h2><a href="/aidcraft-site/blog/post-slug.html">Post Title Here</a></h2>
-      <div class="post-meta">March 1, 2026 &middot; <span class="tag">Freelancing</span></div>
-      <p class="post-excerpt">A brief 1-2 sentence summary of the post that appears on the index page.</p>
+      <div class="post-meta">March 1, 2026 &middot; <span class="tag">Category</span></div>
+      <p class="post-excerpt">A brief 1-2 sentence summary of the post.</p>
     </article>
     -->
-  </main>
 
+    <p class="more-soon">More posts coming soon. New articles every week.</p>
+  </main>
   <footer>
-    &copy; 2026 Cobalt Arc. All rights reserved.
+    <p>&copy; 2026 Cobalt Arc. <a href="/aidcraft-site/">Browse Tools</a></p>
   </footer>
 </body>
 </html>
