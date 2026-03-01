@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S-Corp Salary Optimization: How to Pay Yourself and Maximize QBI | Cobalt Arc</title>
+  <meta name="description" content="Learn how S-Corp owners set a reasonable salary to minimize self-employment tax and maximize the 20% QBI deduction. Step-by-step guide with examples.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a1628; color: #e2e8f0; line-height: 1.8; }
+    a { color: #60a5fa; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); border-bottom: 1px solid rgba(96,165,250,0.2); padding: 1rem 2rem; }
+    .header-inner { max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.4rem; font-weight: 700; color: #fff; }
+    .logo span { color: #60a5fa; }
+    nav a { margin-left: 1.5rem; color: #94a3b8; font-size: 0.9rem; }
+    nav a:hover { color: #fff; text-decoration: none; }
+
+    article { max-width: 720px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+    .post-meta { color: #64748b; font-size: 0.85rem; margin-bottom: 2rem; }
+    .tag { display: inline-block; background: rgba(96,165,250,0.15); color: #60a5fa; padding: 0.15rem 0.6rem; border-radius: 99px; font-size: 0.75rem; margin-right: 0.4rem; }
+    h1 { font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.3; }
+    h2 { font-size: 1.35rem; color: #fff; margin: 2rem 0 0.8rem; }
+    p { margin-bottom: 1.2rem; color: #cbd5e1; }
+    strong { color: #fff; }
+    ul, ol { margin: 0 0 1.2rem 1.5rem; color: #cbd5e1; }
+    li { margin-bottom: 0.5rem; }
+    .formula-box { background: rgba(30,58,95,0.5); border: 1px solid rgba(96,165,250,0.2); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 1.5rem 0; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.95rem; color: #60a5fa; text-align: center; }
+    .example-box { background: rgba(30,58,95,0.3); border-left: 3px solid #60a5fa; padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+    .example-box p { margin-bottom: 0.5rem; }
+    .cta-box { background: linear-gradient(135deg, rgba(30,58,95,0.6), rgba(96,165,250,0.1)); border: 1px solid rgba(96,165,250,0.3); border-radius: 12px; padding: 1.5rem 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-box p { color: #94a3b8; margin-bottom: 1rem; }
+    .cta-button { display: inline-block; background: #2563eb; color: #fff; padding: 0.7rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; }
+    .cta-button:hover { background: #1d4ed8; text-decoration: none; }
+
+    footer { text-align: center; padding: 2rem; color: #475569; font-size: 0.85rem; border-top: 1px solid rgba(96,165,250,0.1); }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+    th, td { padding: 0.6rem 1rem; text-align: left; border-bottom: 1px solid rgba(96,165,250,0.15); }
+    th { color: #60a5fa; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    td { color: #cbd5e1; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="/aidcraft-site/" class="logo">Cobalt <span>Arc</span></a>
+      <nav>
+        <a href="/aidcraft-site/">Products</a>
+        <a href="/aidcraft-site/blog/">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <article>
+    <div class="post-meta">March 1, 2026 &middot; <span class="tag">S-Corp</span> <span class="tag">Tax Strategy</span></div>
+    <h1>S-Corp Salary Optimization: How to Pay Yourself and Maximize QBI</h1>
+    <p>If you run an S-Corp (or you're thinking about electing S-Corp status), the single biggest tax lever you control is how much you pay yourself in salary versus distributions. Get the split right and you save thousands in self-employment tax while unlocking the full 20% Qualified Business Income deduction. Get it wrong and you're either overpaying the IRS or inviting an audit.</p>
+    <p>This guide breaks down the mechanics, the math, and the strategy — no jargon, no fluff.</p>
+
+    <h2>Why S-Corp Salary Matters</h2>
+    <p>As a sole proprietor, every dollar of net profit gets hit with self-employment tax at 15.3% (Social Security + Medicare). When you elect S-Corp status, only your <strong>W-2 salary</strong> is subject to payroll taxes. The remaining profit passes through as <strong>distributions</strong>, which are not subject to self-employment tax.</p>
+    <p>The catch: the IRS requires your salary to be "reasonable compensation" for the work you do. You can't pay yourself $10,000 on $300,000 in profit and call the rest distributions. But you also shouldn't pay yourself more than necessary, because every extra dollar of salary costs you 15.3% in payroll taxes that distributions would avoid.</p>
+
+    <h2>The Reasonable Compensation Standard</h2>
+    <p>The IRS doesn't give a specific formula. Instead, they look at factors like your role, industry, experience, hours worked, and what similar positions pay in your market. Think of it this way: if you had to hire someone to do your job, what would you pay them?</p>
+    <p>Common benchmarks for sole-owner S-Corps:</p>
+    <table>
+      <thead>
+        <tr><th>Net Profit Range</th><th>Typical Salary Range</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>$50K – $80K</td><td>60–70% of profit</td><td>Lower profits mean salary is most of it</td></tr>
+        <tr><td>$80K – $150K</td><td>50–60% of profit</td><td>Sweet spot for meaningful tax savings</td></tr>
+        <tr><td>$150K – $300K</td><td>40–50% of profit</td><td>Larger distribution gap, bigger savings</td></tr>
+        <tr><td>$300K+</td><td>35–45% of profit</td><td>Social Security wage base caps help here</td></tr>
+      </tbody>
+    </table>
+    <p>These are guidelines, not rules. The right number depends on your specific situation, but this gives you a reasonable starting range.</p>
+
+    <h2>The QBI Deduction Connection</h2>
+    <p>Section 199A lets S-Corp owners deduct up to <strong>20% of Qualified Business Income</strong> from their taxable income. QBI is essentially your S-Corp profit minus your salary. The deduction is powerful — on $100,000 in QBI, that's a $20,000 reduction in taxable income.</p>
+    <p>Here's where it gets strategic: your salary reduces QBI. Every dollar you shift from distributions to salary shrinks your QBI deduction. So the optimization is a balancing act:</p>
+    <div class="formula-box">
+      Lower Salary → Less Payroll Tax + Larger QBI Deduction<br>
+      Higher Salary → More Payroll Tax + Smaller QBI Deduction
+    </div>
+    <p>For income above certain thresholds ($191,950 single / $383,900 married filing jointly in 2025), the QBI deduction phases out for specified service trades. Below those thresholds, the full 20% applies regardless of industry.</p>
+
+    <h2>Running the Numbers: A Real Example</h2>
+    <p>Let's say your S-Corp generates $200,000 in net profit and you're single. Compare two salary scenarios:</p>
+
+    <div class="example-box">
+      <p><strong>Scenario A — $120,000 Salary:</strong></p>
+      <p>Payroll tax (employer + employee): $120,000 × 15.3% = <strong>$18,360</strong></p>
+      <p>QBI: $200,000 − $120,000 = $80,000</p>
+      <p>QBI deduction (20%): <strong>$16,000</strong></p>
+      <p>Net tax cost of salary choice: $18,360 − $16,000 × marginal rate</p>
+    </div>
+
+    <div class="example-box">
+      <p><strong>Scenario B — $85,000 Salary:</strong></p>
+      <p>Payroll tax (employer + employee): $85,000 × 15.3% = <strong>$13,005</strong></p>
+      <p>QBI: $200,000 − $85,000 = $115,000</p>
+      <p>QBI deduction (20%): <strong>$23,000</strong></p>
+      <p>Net tax cost of salary choice: $13,005 − $23,000 × marginal rate</p>
+    </div>
+
+    <p>Scenario B saves <strong>$5,355 in payroll taxes</strong> and adds <strong>$7,000 more in QBI deduction</strong>. At a 22% marginal rate, that extra QBI deduction saves another $1,540 in income tax. Total savings from optimizing the split: roughly <strong>$6,900 per year</strong>.</p>
+    <p>Multiply that over 5 or 10 years and you can see why this matters.</p>
+
+    <h2>The Social Security Wage Base</h2>
+    <p>There's a ceiling on Social Security tax. In 2025, only the first $176,100 of wages is subject to the 12.4% Social Security portion. Above that, you only pay the 2.9% Medicare tax (plus 0.9% Additional Medicare Tax above $200K for single filers).</p>
+    <p>This means for high-earning S-Corps, the payroll tax savings from lower salary are primarily on the Social Security portion. Once your salary exceeds the wage base, additional salary only costs 2.9-3.8% in payroll taxes — which changes the math on optimal splits at higher income levels.</p>
+
+    <h2>Common Mistakes</h2>
+    <ul>
+      <li><strong>Setting salary too low.</strong> The IRS has won multiple court cases against S-Corp owners paying unreasonably low salaries. If your role would command $80K in the market and you're paying yourself $30K, that's a red flag.</li>
+      <li><strong>Ignoring QBI entirely.</strong> Many S-Corp owners optimize for payroll tax savings without factoring in the QBI deduction. The two interact — you need to model both together.</li>
+      <li><strong>Not adjusting annually.</strong> Your optimal salary changes as your profit changes. A salary that was perfect at $100K profit might be too high or too low at $200K. Revisit the split every year.</li>
+      <li><strong>Forgetting state taxes.</strong> Some states tax S-Corp distributions differently than salary. Your optimal federal split might not be optimal after state taxes.</li>
+    </ul>
+
+    <h2>When S-Corp Election Makes Sense</h2>
+    <p>The S-Corp structure starts saving money when your net self-employment income consistently exceeds roughly $50,000-$60,000 per year. Below that, the cost of running payroll, filing an S-Corp return (Form 1120-S), and the added complexity often outweigh the tax savings. Above that threshold, the savings typically grow with income.</p>
+    <p>You'll also need to run payroll (even if it's just for yourself), file quarterly payroll tax returns, and file a separate corporate tax return. Budget $500-$1,500/year for payroll service and tax prep if you outsource those.</p>
+
+    <div class="cta-box">
+      <p>Want to find your optimal salary-distribution split? Our <strong>S-Corp Optimal Salary & QBI Maximizer</strong> models every variable — payroll taxes, QBI deduction, Social Security wage base, Medicare surtax, and marginal rates — to find the exact salary that minimizes your total tax bill.</p>
+      <a href="https://cobaltarc.lemonsqueezy.com" class="cta-button">See the S-Corp Optimizer &rarr;</a>
+    </div>
+
+    <p><em>Published by Cobalt Arc — practical tools for freelancers and small business owners.</em></p>
+  </article>
+
+  <footer>
+    &copy; 2026 Cobalt Arc. All rights reserved.
+  </footer>
+</body>
+</html>
