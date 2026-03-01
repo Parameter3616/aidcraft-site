@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tax Advisors — Cobalt Arc | Private, Local AI for S-Corp & STR Tax Optimization</title>
+    <meta name="description" content="AI-powered tax advisors that run 100% on your Mac. S-Corp salary optimization + STR rental loss classification with local AI that explains your results. No cloud, no data sharing.">
+    <link rel="canonical" href="https://parameter3616.github.io/aidcraft-site/ai-tax-advisors.html">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MM2J3N97ED"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-MM2J3N97ED');
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #1B3A5C;
+            --blue: #2E75B6;
+            --light-blue: #D5E8F0;
+            --white: #FFFFFF;
+            --gray-dark: #333333;
+            --gray-light: #F8F9FA;
+            --gray-border: #E0E0E0;
+            --green: #22C55E;
+            --green-dark: #16A34A;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--gray-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 1.25rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--white); }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #2a5a8a 100%);
+            color: var(--white);
+            padding: 5rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .privacy-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(34, 197, 94, 0.15);
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            border-radius: 2rem;
+            padding: 0.5rem 1.25rem;
+            font-size: 1rem;
+            color: #86efac;
+        }
+
+        .privacy-badge .icon { font-size: 1.2rem; }
+
+        /* Section */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 3rem;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: var(--gray-light);
+        }
+
+        .how-it-works-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem 1.5rem;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: var(--blue);
+            color: var(--white);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .step h3 {
+            font-size: 1.2rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .step p { color: #555; font-size: 0.95rem; }
+
+        /* Product Cards */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            border: 2px solid var(--gray-border);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            border-color: var(--blue);
+            box-shadow: 0 4px 20px rgba(46, 117, 182, 0.12);
+        }
+
+        .product-card.featured {
+            border-color: var(--blue);
+            box-shadow: 0 4px 20px rgba(46, 117, 182, 0.15);
+        }
+
+        .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--blue);
+            color: var(--white);
+            padding: 0.25rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .product-card h3 {
+            font-size: 1.4rem;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .product-card .price {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.25rem;
+        }
+
+        .product-card .price-note {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card .feature-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .product-card .feature-list li {
+            padding: 0.4rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .product-card .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 0.9rem 1.5rem;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #2563a8;
+            box-shadow: 0 4px 12px rgba(46, 117, 182, 0.3);
+        }
+
+        .btn-outline {
+            background: var(--white);
+            color: var(--blue);
+            border: 2px solid var(--blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--light-blue);
+        }
+
+        /* Privacy Section */
+        .privacy {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .privacy-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+
+        .privacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .privacy-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .privacy-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-item p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        /* Sample Q&A */
+        .sample-qa {
+            background: var(--gray-light);
+        }
+
+        .sample-qa-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+
+        .qa-example {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--blue);
+        }
+
+        .qa-example .question {
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .qa-example .question::before {
+            content: "You: ";
+            color: var(--blue);
+        }
+
+        .qa-example .answer {
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .qa-example .answer::before {
+            content: "AI Advisor: ";
+            color: var(--green-dark);
+            font-weight: 600;
+        }
+
+        /* Requirements */
+        .requirements {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .req-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .req-table th, .req-table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-border);
+        }
+
+        .req-table th {
+            background: var(--gray-light);
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, var(--navy) 0%, #2a5a8a 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .cta .btn { width: auto; padding: 1rem 2.5rem; font-size: 1.1rem; }
+
+        /* Footer */
+        footer {
+            background: var(--gray-light);
+            padding: 2rem 1rem;
+            text-align: center;
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.05rem; }
+            .products { grid-template-columns: 1fr; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-container">
+        <a href="/aidcraft-site/" class="logo">◆ Cobalt Arc</a>
+        <nav>
+            <a href="/aidcraft-site/">All Products</a>
+            <a href="/aidcraft-site/blog/">Blog</a>
+            <a href="#products">AI Advisors</a>
+            <a href="#privacy">Privacy</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+    <h1>AI Tax Advisors That Run on Your Mac</h1>
+    <p>Excel-powered tax optimization tools paired with a local AI advisor that explains your results in plain English. No cloud, no API keys, no data sharing.</p>
+    <div class="privacy-badge">
+        <span class="icon">🔒</span>
+        100% Private — Your Data Never Leaves Your Computer
+    </div>
+</div>
+
+<!-- How It Works -->
+<div class="how-it-works">
+    <div class="how-it-works-inner">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">Set up once in 5 minutes, then get instant AI-powered tax analysis anytime.</p>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Enter Your Data</h3>
+                <p>Open the Excel tool and enter your business financials. The optimizer runs automatically with 1,919+ formulas.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Run the Installer</h3>
+                <p>One command installs everything: the AI engine, the model, and dependencies. Takes 5 minutes, only needed once.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Ask Questions</h3>
+                <p>The AI reads your Excel data and answers questions about your specific situation. "Why is this salary optimal?" "Am I at audit risk?"</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Stay Private</h3>
+                <p>Everything runs on your Mac's GPU. No internet needed after setup. No accounts, no logins, no data collection.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Products -->
+<section id="products">
+    <h2 class="section-title">Choose Your AI Tax Advisor</h2>
+    <p class="section-subtitle">Each bundle includes the Excel optimization tool plus a private AI advisor.</p>
+
+    <div class="products">
+
+        <!-- S-Corp Bundle -->
+        <div class="product-card featured">
+            <div class="badge">Most Popular</div>
+            <h3>S-Corp AI Tax Advisor</h3>
+            <div class="price">$99</div>
+            <div class="price-note">One-time purchase, unlimited use</div>
+            <ul class="feature-list">
+                <li>S-Corp Optimal Salary & QBI Maximizer (Excel, 1,919 formulas)</li>
+                <li>AI advisor explains your optimal salary and why</li>
+                <li>FICA savings calculator with LLC comparison</li>
+                <li>QBI phase-out analysis with step-by-step walkthrough</li>
+                <li>IRS reasonable compensation risk assessment</li>
+                <li>Smart routing: fast model for quick Q&A, premium for deep analysis</li>
+                <li>One-click macOS installer</li>
+                <li>100% local — no cloud, no data sharing</li>
+            </ul>
+            <a href="https://cobaltarc.gumroad.com/l/fyhmp" class="btn btn-primary">Get S-Corp AI Advisor</a>
+        </div>
+
+        <!-- STR Bundle -->
+        <div class="product-card">
+            <h3>STR AI Tax Shield</h3>
+            <div class="price">$79</div>
+            <div class="price-note">One-time purchase, unlimited use</div>
+            <ul class="feature-list">
+                <li>STR Tax Shield Engine (Excel, 3-gate classification)</li>
+                <li>AI advisor walks through each IRS gate for your property</li>
+                <li>§280A residence test analysis</li>
+                <li>§469 rental exception with average stay tracking</li>
+                <li>Material participation assessment (3 IRS tests)</li>
+                <li>Audit Defense Time Log for documenting hours</li>
+                <li>W-2 offset and 5-year savings projection</li>
+                <li>100% local — no cloud, no data sharing</li>
+            </ul>
+            <a href="https://cobaltarc.gumroad.com/l/jhxqdr" class="btn btn-outline">Get STR AI Tax Shield</a>
+        </div>
+
+        <!-- Bundle -->
+        <div class="product-card">
+            <div class="badge">Save $29</div>
+            <h3>Complete AI Tax Suite</h3>
+            <div class="price">$149</div>
+            <div class="price-note">Both tools + AI advisors (vs $178 separately)</div>
+            <ul class="feature-list">
+                <li>Everything in S-Corp AI Tax Advisor</li>
+                <li>Everything in STR AI Tax Shield</li>
+                <li>Single installer sets up both advisors</li>
+                <li>Auto-detects which product you open</li>
+                <li>Smart model routing across both products</li>
+                <li>Save $29 vs buying separately</li>
+            </ul>
+            <a href="https://cobaltarc.gumroad.com/l/mcfpjv" class="btn btn-primary">Get Both — Save $29</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Sample Q&A -->
+<div class="sample-qa">
+    <div class="sample-qa-inner">
+        <h2 class="section-title">See It In Action</h2>
+        <p class="section-subtitle">Real questions the AI advisor can answer using your specific data.</p>
+
+        <div class="qa-example">
+            <div class="question">Why is $60,000 the optimal salary for my situation?</div>
+            <div class="answer">Your optimal salary of $60,000 minimizes your total tax burden by balancing two competing forces. At this salary, you save $18,013 per year in FICA taxes compared to operating as an LLC, because your $140,000 distribution avoids the 15.3% self-employment tax. Meanwhile, your QBI deduction of $27,082 is preserved because you're well below the MFJ phase-out threshold of $383,900. Setting salary lower would increase audit risk, while setting it higher would reduce your FICA savings without meaningfully improving your QBI position. Always verify with your CPA.</div>
+        </div>
+
+        <div class="qa-example">
+            <div class="question">Walk me through why my STR property passed Gate 3</div>
+            <div class="answer">Your property passed the Material Participation test through Test 2 — the "100-hour rule." You and your spouse logged 200 combined hours, which clears the 100-hour minimum. Critically, your 200 hours also exceeds your property manager's 120 hours, satisfying the requirement that no other individual participated more than you. You didn't need to hit the 500-hour threshold (Test 1) because Test 2 alone is sufficient. I'd recommend documenting every hour in the Audit Defense Time Log — the IRS burden of proof is on you, and a contemporaneous log is the gold standard for defense.</div>
+        </div>
+    </div>
+</div>
+
+<!-- Privacy Section -->
+<div class="privacy" id="privacy">
+    <div class="privacy-inner">
+        <h2 class="section-title" style="color: white;">Why Local AI Matters for Tax Data</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.85);">Your financial data is too sensitive for cloud AI. That's why our advisors run 100% on your machine.</p>
+
+        <div class="privacy-grid">
+            <div class="privacy-item">
+                <div class="icon">🖥️</div>
+                <h3>Runs on Your GPU</h3>
+                <p>The AI model runs entirely on your Mac's Apple Silicon chip. No remote servers, no API calls, no cloud processing.</p>
+            </div>
+            <div class="privacy-item">
+                <div class="icon">📡</div>
+                <h3>No Internet Required</h3>
+                <p>After the one-time model download, the advisor works completely offline. Disconnect your WiFi — it still works.</p>
+            </div>
+            <div class="privacy-item">
+                <div class="icon">🔑</div>
+                <h3>No Accounts or Logins</h3>
+                <p>No API keys, no subscriptions, no monthly fees. Install once, use forever. No data collection of any kind.</p>
+            </div>
+            <div class="privacy-item">
+                <div class="icon">🏦</div>
+                <h3>Tax Data Stays Put</h3>
+                <p>Your revenue, expenses, salary, and tax details never leave your computer. Unlike ChatGPT or Copilot, there's no server to breach.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Requirements -->
+<section class="requirements">
+    <h2 class="section-title">System Requirements</h2>
+    <table class="req-table">
+        <tr>
+            <th>Component</th>
+            <th>Minimum</th>
+            <th>Recommended</th>
+        </tr>
+        <tr>
+            <td>Computer</td>
+            <td>Any Mac (Intel or Apple Silicon)</td>
+            <td>Mac with M1/M2/M3/M4 chip</td>
+        </tr>
+        <tr>
+            <td>RAM</td>
+            <td>8 GB</td>
+            <td>16 GB+ (64GB+ for premium model)</td>
+        </tr>
+        <tr>
+            <td>Disk Space</td>
+            <td>5 GB</td>
+            <td>50 GB (for highest-quality model)</td>
+        </tr>
+        <tr>
+            <td>OS</td>
+            <td>macOS 12 Monterey</td>
+            <td>macOS 14 Sonoma or later</td>
+        </tr>
+        <tr>
+            <td>Spreadsheet</td>
+            <td>LibreOffice Calc</td>
+            <td>Microsoft Excel</td>
+        </tr>
+        <tr>
+            <td>Setup Time</td>
+            <td colspan="2">~5 minutes (automated installer)</td>
+        </tr>
+    </table>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+    <h2>Stop Guessing. Start Optimizing.</h2>
+    <p>Get CPA-level tax analysis with an AI that explains the reasoning — all running privately on your Mac.</p>
+    <a href="#products" class="btn btn-primary" style="background: var(--white); color: var(--navy);">View AI Tax Advisors</a>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>
+        <a href="/aidcraft-site/">Home</a> · <a href="/aidcraft-site/blog/">Blog</a> · <a href="#products">AI Advisors</a> · <a href="mailto:aaronhively+cobaltarc@gmail.com">Contact</a>
+    </p>
+    <p style="margin-top: 0.75rem;">
+        &copy; 2026 Cobalt Arc. All rights reserved. ·
+        <a href="/aidcraft-site/#terms">Terms</a> · <a href="/aidcraft-site/#refunds">Refunds</a>
+    </p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+        Disclaimer: These tools provide educational information, not tax advice. Always verify with a qualified CPA.
+    </p>
+
+    <!-- Flodesk Newsletter -->
+    <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--gray-border);">
+        <p style="color: var(--navy); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">Get Free Tax Optimization Tips</p>
+        <div id="fd-form-6801a4b20a34fd6b8d8d5a3e"></div>
+        <script>
+            window.fd('form', {
+                formId: '6801a4b20a34fd6b8d8d5a3e',
+                containerEl: '#fd-form-6801a4b20a34fd6b8d8d5a3e'
+            });
+        </script>
+    </div>
+</footer>
+
+<!-- Flodesk SDK -->
+<script>
+    (function(w, d, t, h, s, n) {
+        w.FlodeskObject = n;
+        var fn = function() { (w[n].q = w[n].q || []).push(arguments); };
+        w[n] = w[n] || fn;
+        var f = d.getElementsByTagName(t)[0];
+        var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+        var sm = d.createElement(t);
+        sm.async = true;
+        sm.type = 'module';
+        sm.src = h + v;
+        f.parentNode.insertBefore(sm, f);
+        var sn = d.createElement(t);
+        sn.async = true;
+        sn.noModule = true;
+        sn.src = s + v;
+        f.parentNode.insertBefore(sn, f);
+    })(window, document, 'script', 'https://assets.flodesk.com/universal.js', 'https://assets.flodesk.com/universal-legacy.js', 'fd');
+</script>
+
+</body>
+</html>
